@@ -304,7 +304,7 @@ df['longitude'] = pd.to_numeric(df['longitude'], errors='coerce')
 fig = px.scatter_mapbox(df, lat='latitude', lon='longitude',hover_data={'latitude': False, 'longitude': False},text = df['Location'] ,zoom=6, height=500,size_max = 20, 
                                         color='Location')
 #       # color_discrete_sequence=['red']
-fig.updasste_layout(mapbox_style='open-street-map', mapbox_zoom=6,
+fig.update_layout(mapbox_style='open-street-map', mapbox_zoom=6,
                       mapbox_center={'lat': 21.1458, 'lon': 79.0882})
 fig.show(config = dict(displayModeBar = False))
 # st.plotly_chart(fig)
