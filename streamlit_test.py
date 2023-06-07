@@ -243,7 +243,7 @@ fig.update_layout(
 # # Display the histogram
 fig.show(config = dict(displayModeBar = False))
 # Display the histogram in Streamlit
-st.plotly_chart(fig)
+st.plotly_chart(fig,config = dict(displayModeBar = False))
 
 fig = px.histogram(df, x='Experience(years)',color_discrete_sequence=['#FFA500'])
 
@@ -254,7 +254,7 @@ fig.update_layout(
     yaxis_title='Count',
 )
 fig.show(config = dict(displayModeBar = False))
-st.plotly_chart(fig)
+st.plotly_chart(fig,config = dict(displayModeBar = False))
 st.markdown('## Statistics about urologists in India : ')
 st.write(df.describe())
 
@@ -292,7 +292,7 @@ fig.update_layout(
 # Display the bar plot in Streamlit
 
 fig.show(config = dict(displayModeBar = False))
-st.plotly_chart(fig)
+st.plotly_chart(fig,config = dict(displayModeBar = False))
 st.write('Map plot')
 
 # df['latitude'] = df['latitude'].astype(float)
@@ -307,7 +307,7 @@ fig = px.scatter_mapbox(df, lat='latitude', lon='longitude',hover_data={'latitud
 fig.update_layout(mapbox_style='open-street-map', mapbox_zoom=6,
                       mapbox_center={'lat': 21.1458, 'lon': 79.0882})
 fig.show(config = dict(displayModeBar = False))
-# st.plotly_chart(fig)
+st.plotly_chart(fig,config = dict(displayModeBar = False))
 # Display the DataFrame
 # st.write(df2.head())
 
